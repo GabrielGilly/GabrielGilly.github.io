@@ -1,0 +1,78 @@
+html{
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+}
+body{
+  font-family: monospace;
+  color: black ;
+  font-size: small;
+  text-align: center;
+  background-image: url(picture/heyre1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:1em;
+  padding:1em;
+}
+.devise{
+  font-size:2em;
+  color:#990000;
+}
+
+#clock, #date {
+    font-size:2em;
+    font-weight: bolder;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.clockdate {
+    margin-top: 50px;
+}
+
+.todayquote{
+  font-size: 1.2em;
+  display: inline-block;
+}
+.cardholder{
+  margin-top:2%;
+}
+.card{
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgb(255, 255, 255, 0.25);
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 200px;
+  min-height: 200px;
+  text-align: center;
+}
+.card:hover{
+background-color: rgb(100, 150, 255, 0.5);
+}
+
+.cardtitle{
+  text-align: left;
+  font-size: 2em;
+  padding-left: 5%;
+  color:#990000;
+}
+
+.gates{
+  list-style: none;
+  padding-left:15%;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.gate{
+  text-decoration: none;
+  color:inherit;
+}
+.gate:hover{
+  background-color: #990000;
+  color:white;
+  transition: 0.1s;
+}
