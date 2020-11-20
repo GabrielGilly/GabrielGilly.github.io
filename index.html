@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Think, Plan, Make, Learn...</title>
+    <link type="text/css" rel="stylesheet" href="style.css"
+  </head>
+ <body onload="startTime()">
+      <h1 class="devise">Think, Plan, Make, Learn...</h1>
+
+      <div class="clockdate">
+          <div class="clockdate-wrapper">
+            <div id="date"></div>
+            <div id="clock"></div>
+          </div>
+      </div>
+
+      <br>
+
+      <div class="todayquote">
+        <q>Le hasard ne favorise que les ésprits préparés. L.P.</q>
+      </div>
+
+    <div class="cardholder">
+
+      <div class="card">
+        <h2 class="cardtitle">Tools</h2>
+        <ul class="gates">
+          <li><a class="gate" target="_blank" title="Proton mail" href="https://beta.protonmail.com/login">Mails</a></li>
+          <li><a class="gate" target="_blank" title="Nextcloud" href="https://nd.nl.tab.digital/apps/calendar/timeGridWeek/now">Calendar</a></li>
+          <li><a class="gate" target="_blank" title="Todoist" href="https://todoist.com/app">Task</a></li>
+          <li><a class="gate" target="_blank" title="Garmin" href="https://connect.garmin.com/signin/?service=https%3A%2F%2Fconnect.garmin.com%2Fmodern%2F">Activity</a></li>
+          <li><a class="gate" target="_blank" title="Wworithings" href="https://healthmate.withings.com/19980512/timeline">health</a></li>
+          <li><a class="gate" target="_blank" title="YNAB" href="https://app.youneedabudget.com/5b26377b-c3ba-46b0-8715-0033e0583b10/budget">Finance</a></li>
+          <li><a class="gate" target="_blank" title="Onedrive" href="https://onedrive.live.com/">Onedrive</a></li>
+          <li><a class="gate" target="_blank" title="Pclound" href="https://my.pcloud.com/">Pcloud</a></li>
+          <li><a class="gate" target="_blank" title="Nextcloud" href="https://nd.nl.tab.digital/apps/files/?dir=/">Nexcloud</a> </li>
+      </ul>
+        </div>
+
+      <div class="card">
+        <h2 class="cardtitle">Bookmarks</h2>
+        <ul class="gates">
+          <li><a  class="gate" target="_blank" title="Amazon UK" href="https://www.amazon.co.uk/">Amazon</a></li>
+          <li><a  class="gate" target="_blank" title="Reddit" href="https://www.reddit.com/">Reddit</a></li>
+          <li><a  class="gate" target="_blank" title="Worldometers" href="https://www.worldometers.info/coronavirus/">Corona</a></li>
+          <li><a  class="gate" target="_blank" title="France" href="https://www.worldometers.info/coronavirus/country/france/">FR</a> <a  class="gate" target="_blank" title="France" href="https://www.worldometers.info/coronavirus/country/uk/">UK</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="cardtitle"><a  class="gate" title="My system" href="pages/framework.html">Framework</a></h2>
+        <ul class="gates">
+          <li><a  class="gate" title="Goals/Targets" href="pages/framework.html#Lgoal">Goals & Targets</a></li>
+          <li><a  class="gate" title="Process control" href="pages/framework.html#Lprocess">Process Control</a></li>
+          <li><a  class="gate" title="Mesurement" href="pages/framework.html#Lmesure">Mesure</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <script type='text/javascript'>
+    function startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        //Add a zero in front of numbers<10
+        hr = checkTime(hr);
+        min = checkTime(min);
+        sec = checkTime(sec);
+        document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " ";
+
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay+", "+curDay+" "+curMonth;
+        document.getElementById("date").innerHTML = date;
+
+        var time = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    </script>
+ </body>
+</html>
