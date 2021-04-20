@@ -1,7 +1,7 @@
 :root{
 	--text-color:#d4d4d4;
 	--grey1:#808080;
-	--color1:#8d0000;
+	--color1:#a00000;
 }
 
 
@@ -10,28 +10,21 @@
 html, body{
 	color:var(--text-color);
 	font-family:courier, monospace;
-}
-
-body{
-	text-align:center;
-	background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)),
-    url("paris_column.JPG");
-	background-position:center;
-	background-size:cover;
-	background-repeat:no-repeat;
+  width: 100%;
+  margin:0;
 }
 
 #datetime{
-	margin: 5vh 0;
 	height: 20vh;
 	vertical-align:middle;
 	display:flex;
+  top:0;
+  right:0;
 }
 .clockdate-wrapper{
 	margin: auto;
 	font-size:3em;
 	text-transform:uppercase;
-	font-weight:bold;
 }
 
 #links-container{
@@ -41,15 +34,8 @@ body{
 	justify-content:center;
 }
 
-.links-card{
-	margin:40px;
-	width: 200px;
-}
-
 .links-card-title{
-	margin:15px 20px 0 20px;
 	text-align:center;
-	font-size:2em;
 	color:var(--color1);
 	border-bottom: var(--color1) 2px solid;
 }
@@ -82,5 +68,51 @@ li:hover{
 	text-transform:uppercase;
 	margin:auto;
 	display:inline-block;
-	font-weight:bold;
+	font-weight:bolder;
+}
+
+@media screen and (max-width: 900px) {
+  .links-card{
+  	margin:2px;
+  	width: 100%;
+  }
+  #clock{
+    display: block;
+  }
+  ul{
+  	text-align:center;
+  }
+  #datetime{
+    position:sticky;
+    font-size: 0.5em;
+    width:100vw;
+    background-color: rgba(0,0,0,1);
+    margin:0;
+  }
+  body{
+    text-align:center;
+    background-color: rgba(0,0,0,1);
+  }
+}
+@media screen and (min-width: 900px) {
+  .links-card{
+  	margin:40px;
+  	width: 200px;
+  }
+  #datetime{
+    position:sticky;
+    font-size: 15px;
+    margin:15px 20px 0 20px;
+  }
+  #clock{
+    display: inline;
+  }
+  body{
+  	text-align:center;
+  	background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)),
+      url("paris_column_light.JPG");
+  	background-position:center;
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  }
 }
