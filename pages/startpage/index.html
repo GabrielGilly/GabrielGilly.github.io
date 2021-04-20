@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Startpage_2</title>
+    <link rel="stylesheet" href="master.css">
+  </head>
+  <body onload="startTime()">
+
+    <section id="datetime" class="clockdate">
+      <div class="clockdate-wrapper">
+        <span id="date"></span>
+        <span id="clock"></span>
+      </div>
+    </section>
+
+    <section id="links-container">
+      <div class="links-card" id="life">
+        <h2 class="links-card-title">LIFE</h2>
+        <ul>
+          <li class="links-element"><a target="_blank" href="https://todoist.com/app/filter/2295590229" class="links-element">task</a></li>
+          <li><a target="_blank" href="https://office.mailbox.org/appsuite/#!!&app=io.ox/mail&folder=default0/INBOX&locale=en_GB&storeLocale=true" class="links-element">mail</a></li>
+          <li><a target="_blank" href="https://office.mailbox.org/appsuite/#!!&app=io.ox/calendar&folder=cal://0/31&locale=en_GB&perspective=week:workweek&storeLocale=true" class="links-element">calendar</a></li>
+          <li><a target="_blank" href="https://healthmate.withings.com/19980512/timeline" class="links-element">health</a></li>
+          <li><a target="_blank" href="https://connect.garmin.com/modern/" class="links-element">activity</a></li>
+          <li><a target="_blank" href="https://app.youneedabudget.com/5b26377b-c3ba-46b0-8715-0033e0583b10/budget" class="links-element">finance</a></li>
+          <li><a target="_blank" href="https://app.youneedabudget.com/5b26377b-c3ba-46b0-8715-0033e0583b10/budget" class="links-element">onedrive</a></li>
+        </ul>
+      </div>
+
+      <div class="links-card" id="code">
+        <h2 class="links-card-title">CODE</h2>
+        <ul>
+          <li><a target="_blank" href="https://github.com/" class="links-element">github</a></li>
+          <li><a target="_blank" href="https://www.freecodecamp.org/" class="links-element">freecodecamp</a></li>
+          <li><a target="_blank" href="https://codepen.io/your-work" class="links-element">codepen</a></li>
+          <li><a target="_blank" href="https://imgur.com/" class="links-element">imgur</a></li>
+        </ul>
+		<span id="code-roadmap">code roadmap</span>
+      </div>
+
+      <div class="links-card" id="work">
+        <h2 class="links-card-title">WORK</h2>
+        <ul>
+          <li><a target="_blank" href="https://outlook.office.com/mail/inbox" class="links-element">mail</a></li>
+		  <li><a target="_blank" href="https://outlook.office.com/calendar/view/week" class="links-element">calendar</a></li>
+		  <li><a target="_blank" href="https://central.wabtec.com/nuxeo/nxpath/default/FT/workspaces/Sites/BTL/00%20Quality/Management%20System%20Docume@view_documents?tabIds=%3ADocumentQualitySearchBySiteTab" class="links-element">ecm</a></li>
+		  <li><a target="_blank" href="https://www.myworkday.com/wday/authgwy/wabtec/login.htmld" class="links-element">workday</a></li>
+          <li><a target="_blank" href="https://wabtec.sharepoint.com/sites/Brush_Traction/Departments/IT/Instruction%20Documents/Instruction%20Documents/Tensor.NET.rdp" class="links-element">tensor</a></li>
+          <li><a target="_blank" href="https://wabtecprod.service-now.com/wb" class="links-element">IT</a></li>
+          <li><a target="_blank" href="https://wabtec.sharepoint.com/sites/Brush_Traction/SitePages/Home.aspx" class="links-element">brush</a></li>
+          <li><a target="_blank" href="https://wabtec.sharepoint.com/sites/UK-BrushGeneralTEAMS/Shared%20Documents/OPERATION%20GOVERNANCE" class="links-element">ops.</a></li>
+          <li><a target="_blank" href="https://brushtraction.live.excelwraps.com/" class="links-element">wraps</a></li>
+          <li><a target="_blank" href="http://btlsrv0004/ETS/Login.aspx" class="links-element">ets</a></li>
+		  <li><a target="_blank" href="https://westinghouse.erp.corp.wabtec.com/" class="links-element">oracle</a></li>
+		  <li><a target="_blank" href="http://btlsrv0004/DDMWeb/" class="links-element">ddm</a></li>
+		  <li><a target="_blank" href="http://wcssrv0250/Reports/report/Reports/ECO%20QUERY_REV3" class="links-element">eco</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <script type='text/javascript'>
+    function startTime() {
+        var today = new Date();
+        var hr = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        //Add a zero in front of numbers<10
+        hr = checkTime(hr);
+        min = checkTime(min);
+        sec = checkTime(sec);
+        document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " ";
+
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var curWeekDay = days[today.getDay()];
+        var curDay = today.getDate();
+        var curMonth = months[today.getMonth()];
+        var curYear = today.getFullYear();
+        var date = curWeekDay+", "+curDay+" "+curMonth;
+        document.getElementById("date").innerHTML = date;
+
+        var time = setTimeout(function(){ startTime() }, 500);
+    }
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    </script>
+
+  </body>
+</html>
