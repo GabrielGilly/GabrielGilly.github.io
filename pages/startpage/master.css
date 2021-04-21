@@ -110,8 +110,6 @@ li:hover{
   body{
   	text-align:center;
   	background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0)), url("paris_column_light.JPG");
-	filter: blur(8px);
-  	-webkit-filter: blur(8px);
   	background-position:center;
   	background-size:cover;
   	background-repeat:no-repeat;
