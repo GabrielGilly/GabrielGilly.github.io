@@ -52,7 +52,7 @@ a{
 	text-decoration:none;
 	color:var(--text-color);
 	text-transform:capitalize;
-	width:100%;
+	width:160px;
 	font-size:1.2em;
 	padding: 3px 20px 3px 20px;
 }
