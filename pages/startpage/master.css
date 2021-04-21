@@ -41,7 +41,7 @@ html, body{
 }
 ul{
 	list-style: none inside none;
-	padding: 0px 20px 0 20px;
+	padding: 0;
 	text-align:left;
 	width:100%
 }
@@ -54,12 +54,12 @@ a{
 	text-transform:capitalize;
 	width:100%;
 	font-size:1.2em;
-	padding: 3px;
+	padding: 3px 20px 3px 20px;
 }
 .links-element:hover{
 	color:var(--color1);
 	border-bottom: var(--color1) solid 2px;
-	padding:3px 3px 1px 3px;
+	padding:3px 20px 1px 20px;
 
 }
 #code-roadmap{
