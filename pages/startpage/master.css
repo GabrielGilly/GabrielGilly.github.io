@@ -45,18 +45,18 @@ ul{
 	text-align:left;
 	width:100%
 }
-
+a{
+	text-decoration:none;	
+}
 .links-element{
 	text-decoration:none;
 	color:var(--text-color);
 	text-transform:capitalize;
 	width:100%;
 	font-size:1.2em;
-}
-li{
 	padding: 3px;
 }
-li:hover{
+.links-element:hover{
 	color:var(--color1);
 	border-bottom: var(--color1) solid 2px;
 	padding:3px 3px 1px 3px;
