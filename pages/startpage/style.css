@@ -68,7 +68,13 @@ a{
 	text-transform:uppercase;
 	margin:auto;
 	display:inline-block;
-	font-weight:bolder;
+	font-weight:bold;
+	font-size:1.4em;
+}
+#code-roadmap:hover{
+		color:var(--text-color);
+	background-color:var(--color1);
+
 }
 
 @media screen and (max-width: 900px) {
