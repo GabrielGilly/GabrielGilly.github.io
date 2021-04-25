@@ -93,6 +93,9 @@ a{
     text-align:center;
     background-color: rgba(0,0,0,1);
   }
+  .links-element{
+	text-align: center;
+}
 }
 @media screen and (min-width: 900px) {
   .links-card{
