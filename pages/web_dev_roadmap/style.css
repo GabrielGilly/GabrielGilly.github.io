@@ -1,0 +1,176 @@
+:root{
+  --color1:#d50000;
+  --color1light:#ff5131;
+  --color1dark:#9b0000;
+  --color2:#64dd17;
+  --color2light:#9cff57;
+  --color2dark:#1faa00;
+  --textlight:#ffffff;
+  --textdark:#00000;
+  --grey1:rgba(110,110,110,1);
+  --grey2:rgba(200,200,200,1);
+  --grey3:rgba(200,200,200,0.75);
+}
+html{
+  width: 98vw;
+  font-family: courier, monospace;
+  font-size: 16px;
+  color:var(--textdark);
+}
+body{
+  width: 100%;
+  background-image: url("topography.svg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+/*Reactive layout*/
+.article_card{
+    width: 100%;
+  }
+.roadmap_header{
+    width: 100%;
+  }
+.ressource_list, .project_list, .what, .why{
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+@media screen and (min-width: 800px) {
+  .article_card{
+    width: 50%;
+  }
+  .roadmap_header{
+      width: 80%;
+    }
+    .ressource_list, .project_list, .what, .why{
+      width: 40%;
+    }
+}
+@media screen and (min-width: 1200px) {
+  .article_card{
+    width: 28%;
+  }
+  .roadmap_header{
+      width: 50%;
+    }
+}
+/*general rules*/
+a{
+  text-decoration: inherit;
+}
+ul{
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin:0;
+}
+
+/*Header display*/
+.page_header{
+  width: 100%;
+  height: 40%;
+  display:flex;
+  justify-content: center;
+  vertical-align: middle;
+}
+.roadmap_header{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  background-image: linear-gradient(var(--grey2),var(--grey3));
+  margin: 10% auto;
+}
+.page_title{
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.title_intro{
+  font-size: 1.5em;
+}
+.link_list{
+ justify-content: space-around;
+}
+.contact_link{
+  color:var(--color1);
+  text-decoration: none;
+}
+
+/*Main sections*/
+.roadmap_section{
+  border-top: solid black 4px;
+  width: 100%;
+}
+.section_title{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 2% 0;
+  background-image: linear-gradient(var(--grey2),var(--grey3));
+}
+
+/*article style*/
+.article-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.article_card{
+  display: inline-block;
+  vertical-align: top;
+  margin: 2% 0;
+  padding: 2%;
+  background-image: linear-gradient(var(--grey2),var(--grey3));
+}
+.article_title{
+  font-size: 1.5em;
+  margin: 2%;
+  width: 100%;
+  font-weight: bold;
+}
+.what, .why{
+  display: inline-block;
+  margin:2%;
+  vertical-align: top;
+}
+.what{
+  font-weight: lighter;
+}
+.why{
+  font-weight: bold;
+}
+
+.ressource_list, .project_list{
+  display: inline-block;
+  vertical-align: top;
+  list-style:circle;
+  margin:2%;
+}
+.comments{
+  list-style: none;
+
+}
+.video, .book, .read, .course{
+  color:var(--color1);
+}
+.sublink{
+  margin-left: 15px;
+}
+.task_done{
+  text-decoration: line-through;
+  color: var(--color2dark);
+}
+
+/*shadow*/
+
+.article_card, .section_title, .roadmap_header {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.article_card:hover, .roadmap_header:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
