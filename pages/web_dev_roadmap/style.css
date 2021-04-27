@@ -7,9 +7,9 @@
   --color2dark:#1faa00;
   --textlight:#ffffff;
   --textdark:#00000;
-  --grey1:rgba(110,110,110,1);
-  --grey2:rgba(255,255,255,1);
-  --grey3:rgba(255,255,255,0.9);
+  --grey1:rgba(255,255,255,1);
+  --grey2:rgba(200,200,200,1);
+  --grey3:rgba(200,200,200,0.9);
 }
 html{
   width: 98vw;
@@ -19,11 +19,13 @@ html{
 }
 body{
   width: 100%;
+  background-color:var(--grey1);
+  /*
   background-image: url("topography.svg");
   background-repeat: repeat;
   background-size: auto;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
 }
 /*Reactive layout*/
 .article_card{
