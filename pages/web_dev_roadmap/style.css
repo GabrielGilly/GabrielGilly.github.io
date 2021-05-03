@@ -60,7 +60,9 @@ body{
 }
 /*general rules*/
 a{
-  text-decoration: inherit;
+  text-decoration: none;
+  text-transform: capitalize;
+  color:var(--color1);
 }
 ul{
   list-style: none;
@@ -155,14 +157,12 @@ ul{
 
 }
 .video, .book, .read, .course{
-  color:var(--color1);
 }
 .sublink{
   margin-left: 15px;
 }
 .task_done{
   text-decoration: line-through;
-  color: var(--color2dark);
 }
 
 /*shadow*/
