@@ -1,0 +1,25 @@
+/* Global css rules for all my pages on github*/
+/*Colors*/
+:root{
+    --background_1 : #ECE3DF; /* 20 25% 90% */
+    --background_2 :#C2D6D6; /*180 20% 80%*/
+    --primary : #B81414; /*0 80% 40%*/
+    --secondary : #813D8F; /*290 40 40*/
+    --text_dark : #05003F; /**/
+}
+/*Fonts*/
+@font-face {
+    font-family:manrope;
+    src:url(assets/fonts/Manrope-Regula.woff2);
+}
+html{
+    font-family: manrope;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
