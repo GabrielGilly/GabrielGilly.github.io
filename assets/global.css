@@ -12,10 +12,58 @@
     font-family:'manrope';
     src:url(fonts/Manrope-Regular.woff2);
 }
+/*Text formating*/
 html{
-    font-family: manrope;
+    font-family: manrope, helvetica, arial, sans-serif;
+    font-weight: 400;
+    color:var(--text_dark);
+    font-size:20px;
 }
-/**/
+h1{
+    font-size: 3rem;
+    font-weight: 800;
+}
+h2{
+    font-size: 1.9rem;
+}
+h3{
+    font-size: 1.3rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+small{
+    font-size: 0.8rem;
+}
+big{
+    font-size: 1.3rem;
+}
+strong{
+    font-weight: 800;
+}
+em{
+    font-style: italic;
+}
+blockquote{
+    font-weight: 200;
+}
+a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+ul{
+    list-style-type:square;
+    list-style-position: inside;
+    padding: 0;
+}
+ol{
+    padding: 0;
+    list-style:decimal;
+    list-style-position: inside;
+}
+li{
+ 
+}
 /**/
 /**/
 /**/
