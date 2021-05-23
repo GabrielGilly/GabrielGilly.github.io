@@ -11,9 +11,11 @@ body{
   margin:auto;
 }
 /*Media querie for mobile*/
+
 @media (orientation : portrait) {
-  body {
-    background-color: green;
+  .article_card{
+    width: 95%;
+    margin: auto;
   }
 }
 /*Header display*/
@@ -55,7 +57,7 @@ header>ul{
 .roadmap_section{
   width: 100%;
   margin: 10vh auto;
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+  border-top: solid 5px var(--text_dark);
 }
 .section_title{
   margin: auto;
@@ -67,10 +69,8 @@ header>ul{
 .article_container{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: colum n;
 }
-.article_card{
-  width: 95%;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
-  margin: auto;
+.article_card>ul{
+  list-style: none;
 }
