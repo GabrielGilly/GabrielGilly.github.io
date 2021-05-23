@@ -5,10 +5,10 @@ html{
   margin:0;
 }
 body{
-  width: 100%;
+  width: 95%;
   height:100%;
   padding:0;
-  margin:0;
+  margin:auto;
 }
 /*Media querie for mobile*/
 @media (orientation : portrait) {
@@ -19,14 +19,58 @@ body{
 /*Header display*/
 header{
   height: 100%;
+  max-height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+header>h1{
+  text-align: center;
+  display: block;
+  margin:20vh auto 20vh auto;
+  overflow-wrap: break-word;
+  padding: 1rem;
+  border: solid 6px var(--text_dark);
+}
+header>big{
+  text-align: center;
+  display: block;
+  margin:auto;
+}
+header>ul{
+  text-align: center;
+  display: block;
+  margin:auto;
+  list-style: none;
+  line-height: 2rem;
+}
+#scroll_down{
+  height: 60px;
+  display: block;
+  margin: auto;
+}
+
+/*Main sections*/
+.roadmap_section{
+  width: 100%;
+  margin: 10vh auto;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+}
+.section_title{
+  margin: auto;
+  width: 95%;
+}
+
+/*Article cards*/
+
+.article_container{
   display: flex;
   justify-content: center;
-  vertical-align: middle;
-  flex-wrap: nowrap;
-  h1{
-    
-  }
+  flex-direction: column;
 }
-/*Main sections*/
-
-/*article style*/
+.article_card{
+  width: 95%;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+  margin: auto;
+}
