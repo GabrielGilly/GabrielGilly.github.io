@@ -1,28 +1,32 @@
 html{
-  width: 100%
+  width: 100%;
+  height:100%;
+  padding:0;
+  margin:0;
 }
 body{
   width: 100%;
+  height:100%;
+  padding:0;
+  margin:0;
 }
-
-}
-/*general rules*/
-
-/*Header display*/
-
-
-/*Main sections*/
-
-/*article style*/
-
-
-@media (orientation : landscape) {
-  body {
-    background-color: red;
-  }
-}
+/*Media querie for mobile*/
 @media (orientation : portrait) {
   body {
     background-color: green;
   }
 }
+/*Header display*/
+header{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-wrap: nowrap;
+  h1{
+    
+  }
+}
+/*Main sections*/
+
+/*article style*/
