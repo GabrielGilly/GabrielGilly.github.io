@@ -10,18 +10,12 @@ body{
   padding:0;
   margin:auto;
 }
-/*Media querie for mobile*/
 
-@media (orientation : portrait) {
-  .article_card{
-    width: 95%;
-    margin: auto;
-  }
-}
 /*Header display*/
 header{
   height: 100%;
   max-height: 100vh;
+  /* make the header a flex box to be reactive*/
   display:flex;
   justify-content: center;
   align-items: stretch;
@@ -31,7 +25,7 @@ header>h1{
   text-align: center;
   display: block;
   margin:20vh auto 20vh auto;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word; /* avoid a large box on mobile*/
   padding: 1rem;
   border: solid 6px var(--text_dark);
 }
@@ -53,24 +47,45 @@ header>ul{
   margin: auto;
 }
 
-/*Main sections*/
-.roadmap_section{
-  width: 100%;
-  margin: 10vh auto;
-  border-top: solid 5px var(--text_dark);
-}
-.section_title{
-  margin: auto;
-  width: 95%;
-}
-
 /*Article cards*/
 
-.article_container{
+.article-container{
+  /*grid to display the article as cards*/
+  display: grid;
+}
+
+/*if on desktop grid with 3 colunm*/
+.article-container{
+  /*grid with only 1 colonm*/
   display: flex;
-  justify-content: center;
-  flex-direction: colum n;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+.article_card{
+  width: 500px;
+}
+
+/*Media querie for mobile*/
+@media (orientation : portrait) {
+  .article-container{
+    /*flex 1 colunm*/
+    display: flex;
+    flex-direction: column;
+  }
+  .article_card{
+    width: 95%;
+  }
+}
+
+.article_card{
+  padding: 2rem;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
 }
 .article_card>ul{
-  list-style: none;
+  list-style: none; /*remoive the symbol on list so I can use my icons*/
+}
+.article_card h2{
+  text-transform: uppercase;
 }
