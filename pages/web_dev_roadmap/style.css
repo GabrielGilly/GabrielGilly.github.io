@@ -5,7 +5,7 @@ html{
   margin:0;
 }
 body{
-  width: 95%;
+  width: 100%;
   height:100%;
   padding:0;
   margin:auto;
@@ -20,6 +20,12 @@ header{
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
+  background-image: url(assets/roadmap-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 1rem;
 }
 header>h1{
   text-align: center;
@@ -28,6 +34,7 @@ header>h1{
   overflow-wrap: break-word; /* avoid a large box on mobile*/
   padding: 1rem;
   border: solid 6px var(--text_dark);
+  background-color: var(--background_2);
 }
 header>big{
   text-align: center;
@@ -49,22 +56,18 @@ header>ul{
 
 /*Article cards*/
 
-.article-container{
-  /*grid to display the article as cards*/
-  display: grid;
-}
-
 /*if on desktop grid with 3 colunm*/
 .article-container{
   /*grid with only 1 colonm*/
   display: flex;
+  padding-top: 2rem;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
   gap: 1rem;
 }
 .article_card{
-  width: 500px;
+  width: clamp(20vw, 500px, 95%);
 }
 
 /*Media querie for mobile*/
@@ -91,4 +94,10 @@ header>ul{
 }
 .article_card h2{
   text-transform: uppercase;
+}
+.article-image{
+  height: 8rem;
+  max-width: 80%;
+  margin: auto;
+  display: block;
 }
